@@ -1,0 +1,929 @@
+{
+	"info": {
+		"_postman_id": "8df15593-e360-4bd8-a592-20ed9c094a14",
+		"name": "project-online-shop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18049439"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"mohamed\",\r\n    \"phone\": \"01225442442532\",\r\n    \"email\": \"mhassan29703@gmail.com\",\r\n    \"password\": \"ASDasd752994\",\r\n    \"status\": \"active\",\r\n    \"gender\": \"male\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localUser}}/register",
+							"host": [
+								"{{localUser}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verify",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmI4OTJhNDAyNjZlM2Y5ZmQxZTAyNDUiLCJpYXQiOjE2NTYyNjMzNDN9.um-LtowyHiDwZDgcAkSIhW5U6kmbK9mkvlCqY43kwwY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"otp\":\"6614\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localUser}}/verify",
+							"host": [
+								"{{localUser}}"
+							],
+							"path": [
+								"verify"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"arwahossam297@gmail.com\",\r\n    \"password\":\"ASDasd752994\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localUser}}/login",
+							"host": [
+								"{{localUser}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add-image-user",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmI4OTJhNDAyNjZlM2Y5ZmQxZTAyNDUiLCJpYXQiOjE2NTYyNjMzNDN9.um-LtowyHiDwZDgcAkSIhW5U6kmbK9mkvlCqY43kwwY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Tatta/Downloads/4.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{localUser}}/add-image-user",
+							"host": [
+								"{{localUser}}"
+							],
+							"path": [
+								"add-image-user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmI4ODJlY2ZkZGJjYTBjMmFjNzVjYTgiLCJpYXQiOjE2NTYyNTk4MTV9.l9O5gCYWt32fT0FGpAvhxIDCOMpxK4u3dTF4EyVzM3w",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{localUser}}/all",
+							"host": [
+								"{{localUser}}"
+							],
+							"path": [
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show single",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmI4OGVkYjAyNjZlM2Y5ZmQxZTAyMzEiLCJpYXQiOjE2NTYyNjIzOTd9.knvsJ7-wgBHZAlLjrC55taAxWpS26QqR2fuBmTXfEyg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{localUser}}/single",
+							"host": [
+								"{{localUser}}"
+							],
+							"path": [
+								"single"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmI4OGVkYjAyNjZlM2Y5ZmQxZTAyMzEiLCJpYXQiOjE2NTYyNjIzOTd9.knvsJ7-wgBHZAlLjrC55taAxWpS26QqR2fuBmTXfEyg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"phone\":\"0101213141516\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localUser}}/update",
+							"host": [
+								"{{localUser}}"
+							],
+							"path": [
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmJiMjIyMDU3ZTBjOTFiNGQ3ODc1MjgiLCJpYXQiOjE2NTY0MzExNjd9.52UsoXRODcVYFLQw_a_h7zhX7ba-UICcA-8x2cVzEQY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{localUser}}/delete",
+							"host": [
+								"{{localUser}}"
+							],
+							"path": [
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change password",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmI4OGIwMTAyNjZlM2Y5ZmQxZTAyMjYiLCJpYXQiOjE2NTYyNjE0MjJ9.rwk7g8fhgWSquzzHc3EIByJ7ZsFUz4AoSM9D0NsvRoY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\":\"ASDasd752994\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localUser}}/change-password",
+							"host": [
+								"{{localUser}}"
+							],
+							"path": [
+								"change-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add address",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmI4OTJhNDAyNjZlM2Y5ZmQxZTAyNDUiLCJpYXQiOjE2NTYyNjMzNDN9.um-LtowyHiDwZDgcAkSIhW5U6kmbK9mkvlCqY43kwwY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"details\": \"assiut\",\r\n    \"addrType\": \"home\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localUser}}/add-address",
+							"host": [
+								"{{localUser}}"
+							],
+							"path": [
+								"add-address"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmI4OTJhNDAyNjZlM2Y5ZmQxZTAyNDUiLCJpYXQiOjE2NTYyNjMzNDN9.um-LtowyHiDwZDgcAkSIhW5U6kmbK9mkvlCqY43kwwY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{localUser}}/logout",
+							"host": [
+								"{{localUser}}"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout all",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmI4OGIwMTAyNjZlM2Y5ZmQxZTAyMjYiLCJpYXQiOjE2NTYyNjE0MjJ9.rwk7g8fhgWSquzzHc3EIByJ7ZsFUz4AoSM9D0NsvRoY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{localUser}}/logout-all",
+							"host": [
+								"{{localUser}}"
+							],
+							"path": [
+								"logout-all"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "add admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"ezz\",\r\n    \"phone\": \"01060328852\",\r\n    \"email\": \"ezzali@gmail.com\",\r\n    \"password\": \"ASDasd752994\",\r\n    \"status\": \"active\",\r\n    \"gender\": \"male\",\r\n    \"userType\": \"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localUser}}/addAdmin",
+							"host": [
+								"{{localUser}}"
+							],
+							"path": [
+								"addAdmin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"ezzali@gmail.com\",\r\n    \"password\": \"ASDasd752994\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localUser}}/login",
+							"host": [
+								"{{localUser}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add-image-admin",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmI4OWM3MDlkOTQ4MjNkZWFiM2Y2MTMiLCJpYXQiOjE2NTYyNjU4NjR9.kcNfMroiUbwPy6XNO6tJOy3nS6-kIEVSdkZ2bJHi9gc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Tatta/Downloads/ezz.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{localUser}}/add-image-admin",
+							"host": [
+								"{{localUser}}"
+							],
+							"path": [
+								"add-image-admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmI4OWM3MDlkOTQ4MjNkZWFiM2Y2MTMiLCJpYXQiOjE2NTYyNjU4NjR9.kcNfMroiUbwPy6XNO6tJOy3nS6-kIEVSdkZ2bJHi9gc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{localUser}}/logout",
+							"host": [
+								"{{localUser}}"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "add category",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmI4OWM3MDlkOTQ4MjNkZWFiM2Y2MTMiLCJpYXQiOjE2NTYyNjU4NjR9.kcNfMroiUbwPy6XNO6tJOy3nS6-kIEVSdkZ2bJHi9gc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Wallet\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localCategory}}/add",
+							"host": [
+								"{{localCategory}}"
+							],
+							"path": [
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add category image",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmI4OWM3MDlkOTQ4MjNkZWFiM2Y2MTMiLCJpYXQiOjE2NTYyNjU4NjR9.kcNfMroiUbwPy6XNO6tJOy3nS6-kIEVSdkZ2bJHi9gc",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Tatta/Downloads/p.jpg"
+								},
+								{
+									"key": "name",
+									"value": "hossam",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{localCategory}}/add-image/62b8a09a2186a35188973be6",
+							"host": [
+								"{{localCategory}}"
+							],
+							"path": [
+								"add-image",
+								"62b8a09a2186a35188973be6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show single",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localCategory}}/single/62b8ae97a45607dff981fa9c",
+							"host": [
+								"{{localCategory}}"
+							],
+							"path": [
+								"single",
+								"62b8ae97a45607dff981fa9c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localCategory}}/all",
+							"host": [
+								"{{localCategory}}"
+							],
+							"path": [
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update category",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmI4OThhODIwYzVkOGI5NWRkMTgwMjciLCJpYXQiOjE2NTYyNjUyNzZ9.mjyTL6ok9hpxedGqgdSNi6MYJb9WG8cDI94IxbB0KHc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Mobile\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localCategory}}/update/62b8a09a2186a35188973be6",
+							"host": [
+								"{{localCategory}}"
+							],
+							"path": [
+								"update",
+								"62b8a09a2186a35188973be6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete category",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmI4OThhODIwYzVkOGI5NWRkMTgwMjciLCJpYXQiOjE2NTYyNjUyNzZ9.mjyTL6ok9hpxedGqgdSNi6MYJb9WG8cDI94IxbB0KHc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{localCategory}}/delete/62bb2b014760fdfb8ce8fd56",
+							"host": [
+								"{{localCategory}}"
+							],
+							"path": [
+								"delete",
+								"62bb2b014760fdfb8ce8fd56"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "add product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmI4OThhODIwYzVkOGI5NWRkMTgwMjciLCJpYXQiOjE2NTYyNjUyNzZ9.mjyTL6ok9hpxedGqgdSNi6MYJb9WG8cDI94IxbB0KHc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"watch Alba\",\r\n    \"description\": \"watch Alba Active Stainless Steel Wrap Bracelet Band Analg Watch\",\r\n    \"image\": \"Alba\",\r\n    \"brand\": \"Alba\",\r\n    \"price\": 1820,\r\n    \"catogryId\": \"62b8aeaea45607dff981fa9f\",\r\n    \"countInStock\":10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localProducts}}/add",
+							"host": [
+								"{{localProducts}}"
+							],
+							"path": [
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localProducts}}/all",
+							"host": [
+								"{{localProducts}}"
+							],
+							"path": [
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show single",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localProducts}}/single/62b8c221fe619b98defb2cd0",
+							"host": [
+								"{{localProducts}}"
+							],
+							"path": [
+								"single",
+								"62b8c221fe619b98defb2cd0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete product",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmI4OThhODIwYzVkOGI5NWRkMTgwMjciLCJpYXQiOjE2NTYyNjUyNzZ9.mjyTL6ok9hpxedGqgdSNi6MYJb9WG8cDI94IxbB0KHc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{localProducts}}/delete/62b8bcfcfe619b98defb2ca4",
+							"host": [
+								"{{localProducts}}"
+							],
+							"path": [
+								"delete",
+								"62b8bcfcfe619b98defb2ca4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update product",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmI4OThhODIwYzVkOGI5NWRkMTgwMjciLCJpYXQiOjE2NTYyNjUyNzZ9.mjyTL6ok9hpxedGqgdSNi6MYJb9WG8cDI94IxbB0KHc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"image\":\"OPPO a16\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localProducts}}/update/62b8bd9dfe619b98defb2cac",
+							"host": [
+								"{{localProducts}}"
+							],
+							"path": [
+								"update",
+								"62b8bd9dfe619b98defb2cac"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "uploud image",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmI4OThhODIwYzVkOGI5NWRkMTgwMjciLCJpYXQiOjE2NTYyNjUyNzZ9.mjyTL6ok9hpxedGqgdSNi6MYJb9WG8cDI94IxbB0KHc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product",
+									"type": "file",
+									"src": "/C:/Users/Tatta/Downloads/Realme C11s.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{localProducts}}/productimage/62b8be8ffe619b98defb2cb8",
+							"host": [
+								"{{localProducts}}"
+							],
+							"path": [
+								"productimage",
+								"62b8be8ffe619b98defb2cb8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Category products",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "item",
+			"item": [
+				{
+					"name": "add item",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmI4ODJlY2ZkZGJjYTBjMmFjNzVjYTgiLCJpYXQiOjE2NTYyNTk4MTV9.l9O5gCYWt32fT0FGpAvhxIDCOMpxK4u3dTF4EyVzM3w",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"quantity\":1,\r\n\"productId\":\"62b8bd9dfe619b98defb2cac\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localItem}}/add",
+							"host": [
+								"{{localItem}}"
+							],
+							"path": [
+								"add"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "order",
+			"item": [
+				{
+					"name": "add order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmI4OTA2YTAyNjZlM2Y5ZmQxZTAyM2IiLCJpYXQiOjE2NTYyNjI3Nzd9.B_PMPE6MueoCBVv02zp1ykKHnNwHBwXB3CeJKcAGYUE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localOrder}}/add",
+							"host": [
+								"{{localOrder}}"
+							],
+							"path": [
+								"add"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "localUser",
+			"value": "localhost:3000/user",
+			"type": "string"
+		},
+		{
+			"key": "localCategory",
+			"value": "localhost:3000/category",
+			"type": "string"
+		},
+		{
+			"key": "localProducts",
+			"value": "localhost:3000/product",
+			"type": "string"
+		},
+		{
+			"key": "localItem",
+			"value": "localhost:3000/item",
+			"type": "string"
+		},
+		{
+			"key": "localOrder",
+			"value": "localhost:3000/order",
+			"type": "string"
+		}
+	]
+}
