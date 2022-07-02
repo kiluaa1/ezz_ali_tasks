@@ -1,0 +1,42 @@
+<div class="container">
+  <!-- Reactive Form -->
+  <div class="card p-1  my-5 w-75  m-auto">
+    <form action="" [formGroup]="loginForm" (ngSubmit)="handleSubmit()">
+      <div class="row gy-4 my-1">
+        <div class="col-12">
+          <input type="email" placeholder="enter your email" (input)="errorMsg = null" class="form-control"
+            formControlName="email">
+          <div class="alert alert-danger" *ngIf="loginData.email.invalid && isSubmitted ">
+            <div *ngIf="email?.errors?.['required']">
+              Email is required
+            </div>
+            <div *ngIf="email?.errors?.['pattern']">
+              email" that must be in the following order: characters@characters.domain (characters followed by an
+              @ sign, followed by more characters, and then a "."After the "." sign, add at least 2 letters from a to z
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <input type="password" placeholder="enter your password" (input)="errorMsg = null" class="form-control"
+            formControlName="password">
+          <div class="alert alert-danger" *ngIf="loginData.password.invalid && isSubmitted ">
+            <div *ngIf="password?.errors?.['required']">
+              password is required
+            </div>
+            <div *ngIf="password?.errors?.['pattern']">
+              <small>password" that must contain 8 or more characters that are of at least one number, and one uppercase
+                and lowercase letter</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Log In</button>
+        </div>
+        <div class="alert alert-danger" *ngIf="errorMsg">
+          {{errorMsg}}
+        </div>
+      </div>
+    </form>
+  </div>
+
+</div>

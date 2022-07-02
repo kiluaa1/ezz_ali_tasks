@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row gy-5">
+    <div class="col-sm-12 col-md-5 py-5">
+      <img src="http://localhost:3000/{{data.image.replace('images/','')}}" alt="">
+    </div>
+    <div class="col-sm-12 col-md-5 d-flex justify-content-evenly align-items-center">
+      <div class="w-100 p-3">
+        <div class="info">
+          <ul class="list-unstyled">
+            <li><strong>Title : </strong>{{data.name}}</li>
+            <li><strong>Brand : </strong>{{data.brand}}</li>
+            <li><strong>Description : </strong>{{data.description}}</li>
+            <li><strong>Price : </strong>{{data.price}}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-center">
+    <app-spinner *ngIf="loading"></app-spinner>
+  </div>
+</div>
